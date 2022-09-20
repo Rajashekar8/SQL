@@ -1,6 +1,15 @@
 
---Show the province_id(s), sum of height; where the total sum of its patient's height is greater than or equal to 7,000.
+---Show the province_id(s), sum of height; where the total sum of its patient's height is greater than or equal to 7,000.----
 
-select province_id, sum(ceil(height)) as new_height from patients 
-group by  province_id having new_height>=7000
-order by province_id desc;
+select province_id, sum(ceil(height)) as new_height 
+from patients 
+group by  province_id 
+having new_height>=7000 
+Order by province_id desc;
+
+
+---Write a query to find the first_name, last name and birth date of patients who have height more than 160 and weight more than 70.----
+
+select first_name, last_name, birth_date
+from patients
+where height>160 and weight>70;
