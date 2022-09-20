@@ -13,3 +13,17 @@ Order by province_id desc;
 select first_name, last_name, birth_date
 from patients
 where height>160 and weight>70;
+
+
+
+
+---Show the difference between the largest weight and smallest weight for patients with the last name 'Maroni'---
+
+select
+(max(weight)-min(weight)) as new_weight
+from patients
+where last_name='Maroni'
+
+
+
+
